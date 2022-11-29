@@ -1,0 +1,43 @@
+{
+  "name": "starit-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "format": "prettier --cache --write .",
+    "postrelease": "git push && git push --tags --no-verify",
+    "version-tag:major": "npm version major -m \"UPGRADE to v%s\"",
+    "version-tag:minor": "npm version minor -m \"UPGRADE to v%s\"",
+    "version-tag:patch": "npm version patch -m \"UPGRADE to v%s\"",
+    "version-tag:premajor": "npm version premajor -m \"UPGRADE to v%s\"",
+    "version-tag:preminor": "npm version preminor -m \"UPGRADE to v%s\"",
+    "version-tag:prepatch": "npm version prepatch -m \"UPGRADE to v%s\"",
+    "version-tag:prerelease": "npm version prerelease -m \"UPGRADE to v%s\""
+  },
+  "dependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "next": "^13.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.28.0",
+    "eslint-config-next": "^13.0.5",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "typescript": "^4.9.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
