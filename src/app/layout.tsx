@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 import RootProvider from '@/components/provider/RootProvider'
 import RootLayout from '@/components/layout/RootLayout'
@@ -17,6 +18,7 @@ export default function Layout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Script src="/charting_library/charting_library.js" />
       <body>
         <RootProvider>
           <RootLayout>{children}</RootLayout>
