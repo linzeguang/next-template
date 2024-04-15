@@ -8,7 +8,7 @@ import { SiweMessage } from 'siwe'
 
 export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
-  // secret: nextAuthSecret,
+  secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: 'jwt'
   },
