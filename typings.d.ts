@@ -1,3 +1,5 @@
+/// <reference types="next-plugin-svgr/types/svg" />
+
 import { SIWESession } from 'siwe'
 
 declare namespace NodeJS {
@@ -11,4 +13,8 @@ declare module 'next-auth' {
     address: string
     chainId: number
   }
+}
+
+declare const TradingView: {
+  widget: import('./public/charting_library/charting_library').ChartingLibraryWidgetConstructor
 }
